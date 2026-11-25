@@ -1,0 +1,628 @@
+/* Large photographic typography and an open editorial grid. */
+.hero-aerial{height:100svh;min-height:680px;background:#746b60;color:#fff}
+.hero-aerial .hero-media{background:#746b60}
+.hero-aerial .hero-media>img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;filter:saturate(.95)}
+.hero-aerial .hero-media:after{display:block;position:absolute;inset:0;content:"";background:radial-gradient(ellipse 50% 35% at 0% 0%,#071421bd 0%,#07142166 35%,transparent 100%),linear-gradient(180deg,#10182066 0%,#18181808 25%,#18181866 58%,#151515ed 100%);pointer-events:none}
+.hero-aerial .hero-copy{top:auto;bottom:38px;left:var(--page-inset);right:var(--page-inset);max-width:none;width:auto;container-type:inline-size}
+.hero-aerial .hero-copy h1{font-size:inherit!important;line-height:.88!important;letter-spacing:-.055em;font-weight:400;text-transform:none;margin:0;max-width:none}
+.hero-title-brand,.hero-title-line{display:block;white-space:nowrap}
+.hero-title-brand{font-size:20cqw;line-height:.85;letter-spacing:-.055em;font-weight:700}
+.hero-title-line{font-size:16.5cqw;line-height:.95;letter-spacing:-.045em;margin-top:-2cqw}
+.hero-aerial-description{position:absolute;right:0;top:13%;width:30%;max-width:450px;font-size:clamp(17px,1.35vw,24px);line-height:1.35;margin:0;font-weight:400}
+
+
+.footer.footer-editorial.wrapper{width:100%;max-width:none;margin:0;background:#1d1d1d;color:#fafafa;border:0;padding:44px var(--page-inset) 26px}
+.footer-newsletter-intro h2{font-size:clamp(76px,8.1vw,156px)!important;line-height:.95!important;font-weight:500;letter-spacing:-.045em;margin:0 0 76px}
+.footer-newsletter-intro>p{font-size:21px;line-height:1.5;max-width:640px;margin:0 0 24px}
+.newsletter-open{display:inline-flex;align-items:center;gap:8px;border-radius:4px;background:#47a01a;color:#fff;font-size:16px;line-height:1.3;padding:10px 24px}
+.newsletter-open:before{content:"";width:3px;height:3px;border-radius:50%;background:currentColor}
+.newsletter-open:hover{background:#003a85}
+.footer-directory{display:grid;grid-template-columns:1.8fr .5fr .85fr;gap:clamp(40px,5vw,96px);border-top:1px solid #ffffff38;margin-top:76px;padding-top:68px}
+.footer-navigation{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;max-width:650px}
+.footer-navigation>div,.footer-connect{display:flex;align-items:flex-start;flex-direction:column;gap:18px}
+.footer-directory a,.footer-directory p{font-size:16px;line-height:1.4;margin:0;color:#fafafa}
+.footer-office>p+p{margin-top:12px}
+.footer-office>p:last-child{margin-top:22px}
+.footer-directory .footer-directory-label{font-size:14px;font-weight:400}
+.footer-connect .footer-social-label{margin-top:4px}
+.footer-connect{gap:12px}
+.footer-legal{display:grid;grid-template-columns:1fr 1fr 2fr auto;gap:24px;align-items:end;margin-top:100px;font-size:14px;line-height:1.4;color:#a8adb1}
+.footer-legal>span{text-align:center}
+.footer-legal>a:last-child{text-align:right}
+.footer-editorial a[href]:hover{color:#a5d887}
+#newsletter-dialog{max-width:580px}
+#newsletter-dialog h2{font-size:48px!important;line-height:1.05!important;margin:16px 0 32px}
+#newsletter-dialog .newsletter-form>div{display:flex;gap:12px;border-bottom:1px solid #9aa4aa;padding-block:12px}
+#newsletter-dialog .newsletter-form input{font-size:18px;min-width:0;flex:1;padding:10px 0}
+#newsletter-dialog .newsletter-form button{font-size:16px;padding:12px 18px;border-radius:4px;white-space:nowrap}
+#newsletter-dialog .newsletter-status{font-size:15px;line-height:1.5;margin-top:20px}
+
+@media(min-width:1700px){.hero-aerial .hero-copy{bottom:44px}}
+@media(max-width:1000px){
+  .hero-aerial-description{width:33%;top:2%;font-size:17px}
+  .footer-directory{grid-template-columns:1.2fr .7fr;gap:48px}
+  .footer-navigation{grid-column:1/-1;max-width:none}
+}
+@media(max-width:700px){
+  .hero-aerial{height:100svh;min-height:680px}
+  .hero-aerial .hero-media>img{object-position:58% center}
+  .hero-aerial .hero-copy{left:20px;right:20px;bottom:30px}
+  .hero-title-brand{font-size:22vw;line-height:.9}
+  .hero-title-line{font-size:14vw;letter-spacing:-.045em;margin-top:0}
+  .hero-aerial-description{position:static;max-width:280px;width:100%;font-size:18px;line-height:1.4;margin:30px 0 0}
+  .footer.footer-editorial.wrapper{padding:52px 20px 28px}
+  .footer-newsletter-intro h2{font-size:13.7vw!important;margin-bottom:42px}
+  .footer-newsletter-intro>p{font-size:19px;max-width:34ch}
+  .footer-directory{grid-template-columns:1fr 1fr;gap:44px 28px;margin-top:56px;padding-top:40px}
+  .footer-navigation{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .footer-navigation>div{gap:18px}
+  .footer-directory a,.footer-directory p{font-size:15px}
+  .footer-directory .footer-directory-label{font-size:12px}
+  .footer-legal{grid-template-columns:1fr 1fr;gap:22px 16px;margin-top:56px;font-size:12px}
+  .footer-legal>span{text-align:left}.footer-legal>a:last-child{align-self:end}
+  #newsletter-dialog h2{font-size:38px!important}
+}
+
+/* Shared action-button corners across the landing page. */
+.button,.newsletter-open,.header .header-links .header-login,.menu-toggle,.newsletter-form button,.dialog-close{border-radius:4px}
+
+/* Open editorial introduction, following the supplied typography reference. */
+#about{padding-block:100px 110px}
+.story-editorial-heading{position:relative}
+.story-about-label{position:absolute;left:0;top:9px;font-size:16px;color:#777f84}
+#about .story-editorial-statement{font-size:clamp(38px,3.7vw,68px);line-height:1.08;letter-spacing:-.025em;font-weight:500;text-align:left;text-indent:240px;color:#202529}
+.story-editorial-statement em{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.04em}
+.story-editorial-bottom{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:64px;margin-top:80px}
+.story-editorial-bottom img{width:clamp(220px,19vw,310px);height:320px;object-fit:cover;border-radius:6px}
+.story-editorial-bottom>p{max-width:390px;font-size:20px;line-height:1.45;color:#53616a}
+@media(max-width:800px){#about{padding-block:72px}.story-about-label{position:static;margin-bottom:30px}#about .story-editorial-statement{text-indent:0;font-size:clamp(34px,6vw,48px)}.story-editorial-bottom{gap:32px;margin-top:48px}.story-editorial-bottom img{width:100%;height:260px}.story-editorial-bottom>p{font-size:18px}}
+@media(max-width:500px){.story-editorial-bottom{grid-template-columns:1fr}.story-editorial-bottom img{width:65%;height:250px}.story-editorial-bottom>p{max-width:30ch}}
+
+
+/* A quieter heading scale for the news section. */
+#news .section-heading h2{font-size:clamp(42px,5.2vw,88px)!important;line-height:1.05!important}
+
+#businesses .business-lpg-technician{object-position:50% center}
+
+/* Quiet architectural linework behind the introduction. */
+#about{position:relative;isolation:isolate}
+#about:before{content:"";position:absolute;inset:0 calc(-1 * var(--page-inset));z-index:-1;background:url('assets/about-geometric-lines.svg') center/cover no-repeat;opacity:.42;pointer-events:none}
+@media(max-width:800px){#about:before{opacity:.3;background-position:35% center}}
+
+/* Static rewards field, expanded across the top-left of the navy panel. */
+#everyday .emcan-rewards-field{display:block;inset:0 auto auto 0;width:48%;height:45%;opacity:.8;transition:none;background-size:38px 38px;mask-image:radial-gradient(ellipse at 28% 22%,#000 8%,#000b 42%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse at 28% 22%,#000 8%,#000b 42%,transparent 78%)}
+/* Local contrast behind the Insight badges. */
+#news .card-image:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,15,24,.46),rgba(5,15,24,.16) 28%,transparent 55%)}
+#news .image-tag{z-index:2;background:rgba(8,20,31,.25);border-color:rgba(255,255,255,.65);color:#fff}
+
+.newsletter-open:before{display:none;content:none}
+
+/* Brand-colour aurora: background only, existing content remains above it. */
+#station-moments{position:relative;isolation:isolate;overflow:hidden;background:#030914}
+#station-moments .station-banner-content{position:relative;z-index:1}
+.numbers-aurora{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.numbers-aurora i{position:absolute;display:block;width:110%;height:30%;left:-20%;top:23%;background:linear-gradient(90deg,transparent,#003a85b3 25%,#1477a399 55%,transparent);filter:blur(36px);transform:rotate(-24deg);mix-blend-mode:screen;animation:brand-aurora 18s ease-in-out infinite alternate;opacity:.7}
+.numbers-aurora i:nth-child(2){top:50%;left:10%;height:22%;background:linear-gradient(90deg,transparent,#47a01a80 35%,#26835770 65%,transparent);animation-duration:22s;animation-delay:-7s;transform:rotate(-28deg)}
+.numbers-aurora i:nth-child(3){top:-10%;left:45%;width:65%;height:40%;background:linear-gradient(90deg,transparent,#003a8580,transparent);animation-duration:15s;animation-delay:-4s}
+.numbers-aurora:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent,#030914a6 85%),url('assets/aurora-grain.svg');opacity:.65}
+@keyframes brand-aurora{0%{translate:0 0;scale:1;opacity:.7}100%{translate:7% -8%;scale:1.1;rotate:4deg;opacity:.4}}
+@media(prefers-reduced-motion:reduce){.numbers-aurora i{animation:none}}
+
+.hero-aerial .hero-media:after{background:radial-gradient(ellipse 50% 35% at 0% 0%,#031329b3,transparent),linear-gradient(180deg,#09214966 0%,#003a8540 35%,#09214999 65%,#030c1aeb 100%)}
+
+/* Consistent restrained warmth across all editorial card photography. */
+#businesses .card-image>img,#news .card-image>img{filter:saturate(.9) sepia(.09) brightness(.99)}
+#everyday .emcan-rewards-field{opacity:.38}
+.hero-aerial .hero-media:after{background:radial-gradient(ellipse 50% 35% at 0% 0%,#101010b3,transparent),linear-gradient(180deg,#15151566 0%,#15151526 35%,#15151580 65%,#080808eb 100%)}
+.footer.footer-editorial.wrapper{position:relative;isolation:isolate;overflow:hidden;background:#030914}
+.footer-editorial>.footer-aurora{z-index:-1}
+.footer-aurora i{height:24%;top:20%}
+.footer-aurora i:nth-child(2){top:58%}
+
+/* Final spacing and small-label alignment. */
+.story-about-label,.label,.business-eyebrow,.image-tag{text-transform:uppercase;letter-spacing:.08em;font-size:12px;line-height:1.5}
+.story-about-label{color:#348324}
+#about{padding-block:clamp(112px,9vw,160px)}
+.story-editorial-bottom{margin-top:clamp(72px,6vw,100px)}
+.section-heading{margin-bottom:64px}
+#news{padding-bottom:clamp(112px,9vw,160px)}
+#news .news-text-panel{padding:30px 28px 34px}
+#news .news-text-panel .label{margin-bottom:18px}
+.footer.footer-editorial.wrapper{padding-top:clamp(72px,6vw,108px);padding-bottom:36px}
+.footer-newsletter-intro{position:relative;z-index:1;max-width:75%}
+.footer-reward-pattern{position:absolute;top:36px;right:24px;width:250px;height:240px;pointer-events:none;background:url('assets/rewards-gift-pattern.svg') repeat;background-size:28px 28px;opacity:.34;mask-image:radial-gradient(ellipse at 85% 15%,#000,transparent 78%);-webkit-mask-image:radial-gradient(ellipse at 85% 15%,#000,transparent 78%)}
+@media(max-width:800px){#about{padding-block:80px}.section-heading{margin-bottom:40px}#news{padding-bottom:88px}.footer-newsletter-intro{max-width:100%}.footer-reward-pattern{width:160px;height:150px;right:0;top:0;opacity:.16}}
+
+.main-menu .menu-feature img,.main-menu .menu-feature:hover img{filter:grayscale(1) brightness(.82)}
+
+
+/* Shared atmospheric menu background and monochrome preview photography. */
+#main-menu{isolation:isolate;background:#030914}
+#main-menu>.menu-aurora{position:fixed;z-index:-1}
+#main-menu .menu-feature img,#main-menu .menu-feature:hover img{filter:grayscale(1) brightness(.86)!important}
+/* Gentle, short-distance motion; scrolling remains native. */
+@media(prefers-reduced-motion:no-preference){
+ .js [data-reveal]{transition:opacity .85s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
+ .js [data-reveal]:not(.in-view){transform:translateY(20px)}
+ .js [data-reveal].in-view{transform:none}
+ .reveal-word>span{transition:transform .9s cubic-bezier(.22,1,.36,1),opacity .8s ease}
+ .button,.newsletter-open,.header-login,.menu-toggle{transition:background-color .35s ease,color .35s ease,transform .45s cubic-bezier(.22,1,.36,1)}
+ .card-image img,.menu-feature img{transition:transform 1.1s cubic-bezier(.22,1,.36,1),filter .6s ease}
+ .editorial-card:hover .card-image img{transform:scale(1.025)}
+}
+
+.story-about-label{top:20px}
+
+
+body.menu-open .header,body.menu-open .header.is-scrolled{background:transparent!important;backdrop-filter:none;border-color:transparent}
+
+
+/* Taller, more spacious photographic hero. */
+.hero-aerial{height:112svh;min-height:780px}
+.hero-aerial .hero-copy{bottom:clamp(48px,5vh,76px)}
+@media(max-width:700px){.hero-aerial{height:105svh;min-height:740px}.hero-aerial .hero-copy{bottom:40px}}
+
+#everyday .emcan-rewards-corner{position:absolute;right:0;bottom:0;width:32%;height:30%;z-index:0;pointer-events:none;background:url('assets/rewards-gift-pattern.svg') repeat;background-size:28px 28px;opacity:.3;mask-image:radial-gradient(ellipse at 100% 100%,#000 10%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse at 100% 100%,#000 10%,transparent 78%)}
+.story-editorial-bottom>p{font-weight:500;color:#46545d}
+
+/* Quiet content CTAs with a green hover state. */
+.button{background:#e0e2df!important;color:#202529!important}
+.button:hover,.button:focus-visible{background:#47a01a!important;color:#fff!important}
+
+/* Larger header logo, including compact and mobile header states. */
+.header .brand,.menu-open .header .brand{width:64px}
+.header.is-scrolled .brand{width:44px}
+.header .brand img{width:100%;height:auto}
+@media(max-width:700px){.header .brand,.menu-open .header .brand{width:48px}.header.is-scrolled .brand{width:40px}}
+.footer-newsletter-intro h2{font-size:clamp(66px,7vw,136px)!important}
+@media(max-width:700px){.footer-newsletter-intro h2{font-size:12vw!important}}
+/* Balanced connection heading and a compact, aligned supporting block. */
+.footer-newsletter-intro{max-width:100%;padding-top:16px}
+.footer-newsletter-intro h2{font-size:clamp(56px,6vw,112px)!important;line-height:1.04!important;letter-spacing:-.035em;max-width:1050px;margin:0 0 32px}
+.footer-newsletter-intro h2>span{display:block}
+.footer-newsletter-intro>p{font-size:18px;line-height:1.55;max-width:560px;margin:0 0 24px}
+.footer-newsletter-intro .newsletter-open{min-height:44px;padding:12px 26px;font-size:16px;line-height:1.25}
+@media(max-width:700px){.footer-newsletter-intro{padding-top:0}.footer-newsletter-intro h2{font-size:clamp(38px,10vw,64px)!important;margin-bottom:24px}.footer-newsletter-intro>p{font-size:17px;max-width:34ch;margin-bottom:22px}}
+
+.footer-navigation .search-open{font:inherit;font-size:16px;line-height:1.4;color:inherit;background:transparent;border:0;padding:0;text-align:left}
+.footer-navigation .search-open:hover{color:#a5d887}
+@media(max-width:700px){.footer-navigation .search-open{font-size:15px}}
+/* Brand summary replaces the former address and social columns. */
+.footer-brand-summary{grid-column:2/-1;justify-self:start;align-self:start;max-width:320px}
+.footer-summary-logo{display:inline-block;width:48px}
+.footer-summary-logo img{width:100%;height:auto;object-fit:contain;filter:brightness(0) invert(1)}
+.footer-directory .footer-summary-title{font-size:28px;line-height:1.25;font-weight:400;margin:28px 0 14px;color:#fafafa}
+.footer-directory .footer-summary-description{font-size:15px;line-height:1.8;color:#c3c9cc;margin:0}
+@media(max-width:1000px){.footer-brand-summary{grid-column:1/-1}}
+@media(max-width:700px){.footer-directory .footer-summary-title{font-size:26px;margin-top:22px}.footer-directory .footer-summary-description{font-size:14px}}
+/* Brand summary on the left; navigation groups on the right. */
+.footer-directory{grid-template-columns:1fr 2.6fr}
+.footer-brand-summary{grid-column:1;grid-row:1}
+.footer-directory .footer-navigation{grid-column:2;grid-row:1;max-width:none}
+@media(max-width:1000px){.footer-directory{grid-template-columns:1fr}.footer-brand-summary{grid-column:1;grid-row:1}.footer-directory .footer-navigation{grid-column:1;grid-row:2}}
+/* Supplied media-centre copy within the existing news-card design. */
+#news .news-text-panel{display:flex;flex-direction:column;align-items:stretch}
+#news .news-meta{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;text-transform:none;letter-spacing:0}
+#news .news-meta time{font-size:11px;white-space:nowrap}
+#news .news-read-story{display:inline-flex;align-items:center;gap:24px;align-self:flex-start;font-size:14px;line-height:1.4;margin-top:auto;padding-top:28px;padding-bottom:10px;border-bottom:1px solid #bac1c3;color:#263740}
+#news .news-read-story svg{flex:none}
+.hero-aerial .hero-title-line{margin-top:1.2cqw}
+/* Single-line hero statement anchored at the bottom of the banner. */
+.hero-aerial .hero-copy{display:flex;flex-direction:column}
+.hero-aerial .hero-copy h1{font-size:12cqw!important;line-height:1!important;letter-spacing:-.045em;white-space:nowrap;margin:0}
+.hero-aerial .hero-title-brand,.hero-aerial .hero-title-line{display:inline;font-size:inherit;line-height:inherit;letter-spacing:inherit;margin:0;white-space:nowrap}
+.hero-aerial .hero-aerial-description{position:static;order:-1;align-self:flex-end;width:30%;max-width:450px;margin:0 0 28px}
+@media(max-width:700px){.hero-aerial .hero-copy h1{font-size:12cqw!important}.hero-aerial .hero-aerial-description{align-self:flex-start;width:100%;max-width:280px;font-size:17px;margin:0 0 24px}}
+/* Restore the preceding two-line hero composition. */
+.hero-aerial .hero-copy{display:block}
+.hero-aerial .hero-copy h1{font-size:inherit!important;line-height:.88!important;white-space:normal;letter-spacing:-.055em}
+.hero-aerial .hero-title-brand,.hero-aerial .hero-title-line{display:block;white-space:nowrap}
+.hero-aerial .hero-title-brand{font-size:20cqw;line-height:.85;letter-spacing:-.055em;font-weight:700}
+.hero-aerial .hero-title-line{font-size:16.5cqw;line-height:.95;letter-spacing:-.045em;margin-top:1.2cqw}
+.hero-aerial .hero-aerial-description{position:absolute;right:0;top:13%;width:30%;max-width:450px;margin:0}
+#station-moments .stat-unit{font-size:.45em;letter-spacing:0;margin-left:.16em}
+#station-moments .stat-unit sup{font-size:.6em;vertical-align:super}
+@media(max-width:700px){.hero-aerial .hero-copy h1{font-size:inherit!important}.hero-aerial .hero-title-brand{font-size:22vw;line-height:.9}.hero-aerial .hero-title-line{font-size:14vw;letter-spacing:-.045em;margin-top:0}.hero-aerial .hero-aerial-description{position:static;max-width:280px;width:100%;font-size:18px;line-height:1.4;margin:30px 0 0}}
+@media(min-width:701px){.hero-aerial .hero-aerial-description{top:calc(13% + 32px)}}
+/* Our heritage: editorial heading, three milestones and an archive image. */
+.heritage-section{display:grid;grid-template-columns:1fr 1.05fr;gap:56px 64px;padding-block:clamp(88px,8vw,144px);align-items:start;scroll-margin-top:24px}
+.heritage-heading>.label{margin-bottom:24px}
+.heritage-heading h2{font-size:clamp(40px,3.7vw,64px)!important;line-height:1.1!important;letter-spacing:-.02em;max-width:700px;margin:0}
+.heritage-intro{max-width:440px;font-size:18px;line-height:1.65;color:#65727c;justify-self:end;align-self:end;margin:0;padding-bottom:4px}
+.heritage-story{display:flex;flex-direction:column;align-items:flex-start;align-self:stretch;padding:24px 0 36px}
+.heritage-timeline{position:relative;list-style:none;margin:0;padding:0;max-width:420px}
+.heritage-timeline:before{content:'';position:absolute;left:4px;top:8px;bottom:12px;width:1px;background:#cbd0cc}
+.heritage-timeline li{position:relative;padding:0 0 54px 36px}
+.heritage-timeline li:last-child{padding-bottom:0}
+.heritage-timeline li:before{content:'';position:absolute;left:0;top:7px;width:9px;height:9px;background:#c4cac5;border-radius:0}
+.heritage-timeline li:first-child:before{background:#47a01a}
+.heritage-timeline h3{font-size:20px!important;line-height:1.3!important;font-weight:500;margin:0 0 10px}
+.heritage-timeline p{font-size:16px;line-height:1.5;color:#65727c;margin:0}
+.heritage-story>.button{margin-top:auto}
+.heritage-image{position:relative;height:clamp(560px,44vw,760px);margin:0;overflow:hidden;border-radius:4px;background:#d7d9d5;isolation:isolate}
+.heritage-image>img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;filter:grayscale(1)}
+.heritage-image:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(transparent 50%,rgba(0,0,0,.68))}
+.heritage-image figcaption{position:absolute;left:32px;right:32px;bottom:30px;z-index:1;color:#fff}
+.heritage-image figcaption p{font-size:28px;line-height:1.18;font-weight:400;letter-spacing:-.01em;margin:0 0 26px}
+.heritage-image figcaption span{display:inline-block;font-size:11px;line-height:1.4;letter-spacing:.04em;padding:6px 9px;border:1px solid #ffffff73}
+@media(max-width:1000px){.heritage-section{gap:40px 36px}.heritage-intro{font-size:17px}.heritage-heading h2{font-size:42px!important}.heritage-timeline li{padding-bottom:44px}.heritage-image{height:560px}.heritage-image figcaption{left:24px;right:24px}.heritage-image figcaption p{font-size:25px}}
+@media(max-width:700px){.heritage-section{grid-template-columns:1fr;padding-block:72px;gap:28px}.heritage-heading h2{font-size:36px!important}.heritage-heading>.label{margin-bottom:18px}.heritage-intro{justify-self:start;max-width:100%;font-size:17px;padding:0}.heritage-story{padding:12px 0 8px}.heritage-story>.button{margin-top:36px}.heritage-timeline li{padding-bottom:36px}.heritage-image{height:520px;width:100%;margin-top:8px}.heritage-image figcaption{bottom:24px}.heritage-image figcaption p{font-size:27px}}
+/* Sustainability: full-bleed photographic statement with quiet supporting themes. */
+.sustainability-section{padding-top:36px;scroll-margin-top:0}
+.sustainability-banner{position:relative;isolation:isolate;min-height:680px;height:90svh;max-height:960px;overflow:hidden;background:#25342e;color:#fff}
+.sustainability-banner-media{position:absolute;inset:0;z-index:-1}
+.sustainability-banner-media img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.sustainability-banner-media:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,20,15,.78),rgba(6,20,15,.24) 48%,rgba(6,20,15,.06)),linear-gradient(0deg,rgba(6,20,15,.62),transparent 60%)}
+.sustainability-banner-heading{position:absolute;top:clamp(64px,8vh,100px);left:var(--page-inset);right:var(--page-inset)}
+.sustainability-banner-heading>.label{font-size:12px;font-weight:400;letter-spacing:.045em;margin:0 0 26px;color:#fff}
+.sustainability-banner #nation-title{font-family:'Test Karbon',Arial,sans-serif;font-size:clamp(54px,5.8vw,104px)!important;line-height:1.02!important;letter-spacing:-.035em;font-weight:400;color:#fff;margin:0;max-width:820px}
+.sustainability-banner-copy{position:absolute;left:30%;bottom:12%;max-width:430px;margin-right:var(--page-inset)}
+.sustainability-banner-copy>p{font-size:18px;line-height:1.5;color:#fff;margin:0 0 28px}
+.sustainability-banner-link{display:inline-flex;align-items:center;gap:24px;padding-bottom:8px;border-bottom:1px solid #ffffff75;font-size:16px;line-height:1.5;color:#fff}
+.sustainability-banner-link:hover{color:#b9e4a6;border-bottom-color:currentColor}
+.sustainability-banner-link svg{flex:none}
+.sustainability-themes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gutter);padding-block:64px 104px;scroll-margin-top:100px}
+.sustainability-themes article{display:flex;flex-direction:column;align-items:flex-start;border-top:1px solid #cbd1cd;padding-top:24px}
+.sustainability-theme-label{font-size:12px;line-height:1.5;letter-spacing:.035em;color:#718078;margin:0 0 20px}
+.sustainability-themes h3{font-size:26px!important;line-height:1.2!important;font-weight:400;margin:0 0 20px;letter-spacing:-.01em}
+.sustainability-theme-description{font-size:16px;line-height:1.6;color:#64717a;margin:0 0 28px;max-width:42ch}
+.sustainability-theme-link{display:inline-flex;align-items:center;justify-content:space-between;gap:32px;font-size:14px;line-height:1.4;margin-top:auto;padding:0 0 12px;border-bottom:1px solid #b4beb8;color:#203529}
+.sustainability-theme-link svg{flex:none}
+@media(max-width:1000px){.sustainability-banner #nation-title{font-size:64px!important}.sustainability-banner-copy{left:var(--page-inset);bottom:10%;max-width:390px}.sustainability-themes h3{font-size:24px!important}}
+@media(max-width:700px){.sustainability-section{padding-top:8px}.sustainability-banner{min-height:700px;height:90svh;max-height:900px}.sustainability-banner-media img{object-position:53% 30%}.sustainability-banner-media:after{background:linear-gradient(180deg,rgba(5,20,13,.65),rgba(5,20,13,.12) 45%,rgba(5,20,13,.8))}.sustainability-banner-heading{top:48px;left:20px;right:20px}.sustainability-banner-heading>.label{font-size:11px;margin-bottom:20px}.sustainability-banner #nation-title{font-size:clamp(42px,9.5vw,60px)!important;max-width:100%}.sustainability-banner-copy{left:20px;right:20px;bottom:40px;max-width:360px;margin:0}.sustainability-banner-copy>p{font-size:17px;margin-bottom:24px}.sustainability-banner-link{font-size:15px;gap:16px}.sustainability-themes{grid-template-columns:1fr;gap:36px;padding-block:44px 72px}.sustainability-theme-label{margin-bottom:14px}.sustainability-themes h3{font-size:25px!important;margin-bottom:16px}}
+/* Clear the previous split-section width so the new banner spans the page. */
+#nation.sustainability-section{display:block;width:100%;max-width:none;margin:0;padding:36px 0 0;gap:0}
+#nation.sustainability-section .sustainability-banner{width:100%;max-width:none;margin:0;border-radius:0}
+@media(max-width:700px){#nation.sustainability-section{padding-top:8px}}
+/* Heritage introduction follows its heading, ahead of the timeline. */
+.heritage-heading{grid-column:1;grid-row:1}
+.heritage-heading .heritage-intro{max-width:540px;margin-top:28px;padding:0;justify-self:auto;align-self:auto}
+.heritage-story{grid-column:1;grid-row:2}
+.heritage-image{grid-column:2;grid-row:1/span 2}
+@media(max-width:700px){.heritage-heading,.heritage-story,.heritage-image{grid-column:1;grid-row:auto}.heritage-heading .heritage-intro{margin-top:24px}}
+.heritage-story>.button{margin-top:36px}
+.heritage-image figcaption p{font-size:36px;font-weight:700;line-height:1.15;margin-bottom:0}@media(max-width:700px){.heritage-image figcaption p{font-size:30px}}
+.sustainability-banner #nation-title{font-size:clamp(64px,6.7vw,120px)!important;font-weight:700;line-height:1.02!important;max-width:1000px}
+@media(max-width:1000px){.sustainability-banner #nation-title{font-size:72px!important}}
+@media(max-width:700px){.sustainability-banner #nation-title{font-size:clamp(44px,10vw,64px)!important}}
+
+/* Heritage milestones: stacked copy with horizontal progress dividers. */
+#heritage .heritage-timeline{width:100%;max-width:420px;margin:0;padding:0;list-style:none}
+#heritage .heritage-timeline:before{content:none}
+#heritage .heritage-timeline li{padding:0 0 28px;margin:0 0 28px}
+#heritage .heritage-timeline li:before{content:none}
+#heritage .heritage-timeline li:not(:last-child):after{content:'';position:absolute;left:0;right:0;bottom:0;height:2px;background:#dfe3df}
+#heritage .heritage-timeline li:first-child:after{background:linear-gradient(to right,#47a01a 54%,#dfe3df 54%)}
+#heritage .heritage-timeline li:last-child{padding-bottom:0;margin-bottom:0}
+#heritage .heritage-timeline h3{font-size:18px!important;line-height:1.3!important;font-weight:500;margin:0 0 12px}
+#heritage .heritage-timeline p{font-size:16px;line-height:1.5;margin:0;color:#65727c}
+
+/* Scroll-driven heritage story. */
+#heritage .heritage-timeline li:after{content:none!important}
+#heritage .heritage-progress{display:block;position:relative;height:1px;margin-top:26px;background:#dfe3df;overflow:hidden}
+#heritage .heritage-progress span{display:block;height:100%;width:100%;background:#47a01a;transform:scaleX(var(--milestone-progress,0));transform-origin:left;will-change:transform}
+#heritage .heritage-timeline li{padding-bottom:0;margin-bottom:24px;cursor:pointer;outline-offset:6px}
+#heritage .heritage-timeline li:last-child{margin-bottom:0}
+#heritage .heritage-timeline li.is-active h3{color:#367e24}
+#heritage .heritage-image>img{position:absolute;inset:0;opacity:0;transition:opacity .65s ease,transform 1s ease;transform:scale(1.035);filter:none}
+#heritage .heritage-image>img:first-child{filter:grayscale(1)}
+#heritage .heritage-image>img.is-active{opacity:1;transform:scale(1)}
+@media(min-width:1001px) and (min-height:760px) and (prefers-reduced-motion:no-preference){
+ .heritage-scroll-track{height:280svh;position:relative}
+ #heritage.heritage-section{position:sticky;top:0;height:100svh;box-sizing:border-box;padding-block:48px;grid-template-rows:auto 1fr;gap:24px 64px}
+ #heritage .heritage-heading h2{font-size:clamp(36px,3vw,52px)!important}
+ #heritage .heritage-heading .heritage-intro{margin-top:18px;font-size:17px;line-height:1.5}
+ #heritage .heritage-story{padding:0;align-self:start}
+ #heritage .heritage-image{height:100%;min-height:0;align-self:stretch}
+ #heritage .heritage-timeline li{margin-bottom:20px}
+ #heritage .heritage-progress{margin-top:20px}
+ #heritage .heritage-story>.button{margin-top:28px}
+}
+@media(prefers-reduced-motion:reduce){#heritage .heritage-image>img{transition:none;transform:none}}
+
+/* Align the heritage milestones and CTA with the image's bottom edge. */
+@media(min-width:701px){
+ #heritage .heritage-story{align-self:end;padding-bottom:0}
+}
+
+/* Keep focus on the current heritage milestone. */
+#heritage .heritage-timeline li h3,
+#heritage .heritage-timeline li p{opacity:.3;transition:opacity .35s ease}
+#heritage .heritage-timeline li.is-active h3,
+#heritage .heritage-timeline li.is-active p{opacity:1}
+@media(prefers-reduced-motion:reduce){
+ #heritage .heritage-timeline li h3,
+ #heritage .heritage-timeline li p{transition:none}
+}
+
+/* Separate the photographic commitment banner from Media Centre. */
+#news.news-section{padding-top:clamp(88px,7vw,136px)}
+@media(max-width:700px){#news.news-section{padding-top:64px}}
+
+/* Larger, bold heritage heading. */
+#heritage .heritage-heading #heritage-title{font-size:clamp(46px,4vw,68px)!important;line-height:1.05!important;font-weight:700;letter-spacing:-.025em}
+@media(max-width:700px){#heritage .heritage-heading #heritage-title{font-size:clamp(34px,8.5vw,46px)!important}}
+
+/* Final brand gradient: blue upper left flowing into green lower right. */
+#station-moments,.footer.footer-editorial.wrapper{background:radial-gradient(ellipse at 100% 100%,#25934f 0%,#228e59 24%,transparent 68%),linear-gradient(135deg,#005ba9 0%,#0756a0 40%,#086b8b 72%,#258f50 100%)}
+#station-moments>.numbers-aurora,.footer-editorial>.footer-aurora{display:none}
+.footer.footer-editorial .footer-legal{color:#e1ebef}
+
+/* Black progress fill for the heritage timeline. */
+#heritage .heritage-progress span{background:#000}
+
+/* Heritage progress uses the blue-to-green brand gradient. */
+#heritage .heritage-progress span{background:linear-gradient(90deg,#005ba9 0%,#086b8b 55%,#25934f 100%)}
+/* Fullscreen, single-row navigation matching the supplied menu composition. */
+#main-menu{display:flex;flex-direction:column;justify-content:center;isolation:isolate;inset:0;padding:140px var(--page-inset) 80px;background:#030914;color:#fff;min-height:100svh}
+#main-menu[hidden]{display:none!important}
+#main-menu>.menu-aurora{position:absolute;inset:0;z-index:-1}
+#main-menu .menu-link-row{display:flex;align-items:center;justify-content:center;gap:clamp(28px,3.8vw,76px);width:100%;padding:48px 0;transform:translateY(16px);opacity:0;transition:opacity .5s ease,transform .6s ease}
+.menu-open #main-menu .menu-link-row{opacity:1;transform:none}
+#main-menu .menu-link-row>a{font-size:clamp(22px,1.8vw,34px);line-height:1.25;white-space:nowrap;font-weight:400;color:#fff}
+#main-menu .menu-link-row>a:first-child,#main-menu .menu-link-row>a:hover,#main-menu .menu-link-row>a:focus-visible{color:#47a01a}
+#main-menu .menu-bottom{position:absolute;bottom:28px;left:var(--page-inset);right:var(--page-inset);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;margin:0;padding-top:24px;font-size:13px;border-top:1px solid #ffffff20}
+#main-menu .menu-bottom>span{text-align:right}
+body.menu-open .header,body.menu-open .header.is-scrolled{height:128px;padding-block:20px;color:white;box-shadow:none}
+body.menu-open .header .brand{width:64px}
+body.menu-open .header .brand img{filter:brightness(0) invert(1)}
+@media(max-width:1100px){#main-menu .menu-link-row{gap:32px;flex-wrap:wrap;max-width:850px;align-self:center}#main-menu .menu-link-row>a{font-size:26px}}
+@media(max-width:700px){
+ #main-menu{padding:120px var(--page-inset) 150px}
+ #main-menu .menu-link-row{flex-direction:column;gap:24px;padding:24px 0}
+ #main-menu .menu-link-row>a{font-size:26px}
+ #main-menu .menu-bottom{grid-template-columns:1fr auto;font-size:12px;gap:18px;bottom:24px;padding-top:20px}
+ #main-menu .menu-bottom>span{grid-column:1/-1;text-align:left}
+ body.menu-open .header,body.menu-open .header.is-scrolled{height:96px;padding-block:18px}
+ body.menu-open .header .brand{width:48px}
+}
+@media(prefers-reduced-motion:reduce){#main-menu .menu-link-row{transition:none;transform:none}}
+
+/* Brand gradient across the fullscreen navigation. */
+#main-menu{background:radial-gradient(ellipse at 100% 100%,#25934f 0%,#228e59 24%,transparent 68%),linear-gradient(135deg,#005ba9 0%,#0756a0 40%,#086b8b 72%,#258f50 100%)}
+#main-menu>.menu-aurora{display:none}
+#main-menu .menu-link-row>a:first-child{color:#fff}
+#main-menu .menu-link-row>a:hover,#main-menu .menu-link-row>a:focus-visible{color:#fff;text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:1px}
+
+/* Restore the spacious column mega menu, retaining the brand gradient. */
+#main-menu{justify-content:flex-start;padding:180px var(--page-inset) 28px;min-height:0;height:100svh;overflow:auto}
+#main-menu .menu-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(24px,2.5vw,48px);min-height:420px;flex:1;padding:0 0 64px}
+#main-menu .menu-column{min-height:0;gap:14px}
+#main-menu .menu-column>.label{font-size:12px;color:#fff;border-color:#ffffff40;padding-bottom:16px;margin-bottom:4px;letter-spacing:.05em}
+#main-menu .menu-column>.label a{color:inherit;font-size:inherit;font-weight:500}
+#main-menu .menu-column>a{font-size:16px;line-height:1.4;color:#fff}
+#main-menu .menu-column>.menu-feature{margin-top:auto;padding-top:64px}
+#main-menu .menu-feature img{height:auto;aspect-ratio:2.6;object-fit:cover;border-radius:4px;margin-bottom:14px}
+#main-menu .menu-feature span{font-size:14px;line-height:1.4}
+#main-menu a[href]:hover{color:#fff;text-decoration:underline;text-underline-offset:5px}
+#main-menu .menu-bottom{position:static;flex:none;grid-template-columns:1fr auto 1fr;margin-top:0;padding-top:24px}
+@media(max-width:1100px){#main-menu{padding-top:150px}#main-menu .menu-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px;flex:none}#main-menu .menu-column{min-height:300px}#main-menu .menu-column>.menu-feature{padding-top:32px}}
+@media(max-width:700px){#main-menu{padding:124px var(--page-inset) 24px}#main-menu .menu-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 24px;padding-bottom:44px}#main-menu .menu-column{min-height:280px}#main-menu .menu-column>a{font-size:15px}#main-menu .menu-bottom{grid-template-columns:1fr auto}#main-menu .menu-bottom>span{grid-column:1/-1;text-align:left}}
+
+/* Businesses: oversized split cards in a horizontal editorial rail. */
+.businesses-surface{overflow:hidden;background:#f1f2f3}
+#businesses.business-showcase{width:100%;max-width:none;margin:0;padding:0 0 88px;scroll-margin-top:100px}
+.business-showcase-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:48px;margin:0 var(--page-inset) 48px}
+.business-showcase-heading .label{display:inline-block;padding:14px 20px;background:#ffffff66;margin-bottom:24px}
+#businesses #business-title{font-size:clamp(44px,4.3vw,78px)!important;line-height:1.08!important;font-weight:700;letter-spacing:-.025em;color:#000}
+.business-showcase-heading>p{font-size:16px;line-height:1.6;max-width:410px;margin:0 0 24px}
+#businesses .business-panels{display:flex;gap:30px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:var(--page-inset);padding:0 var(--page-inset) 20px;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:#bbc5bf transparent}
+#businesses .business-panel{display:grid;grid-template-columns:1fr 1fr;flex:0 0 min(1064px,86vw);min-width:0;height:640px;padding:18px;background:#fff;border-radius:12px;gap:0;scroll-snap-align:start}
+.business-panel-image{position:relative;min-width:0;overflow:hidden;border-radius:10px;background:#25342e}
+.business-panel-image>img{width:100%;height:100%;object-fit:cover}
+.business-panel-image:after{content:'';position:absolute;inset:0;background:linear-gradient(#0006,transparent 40%);pointer-events:none}
+#businesses .business-panel-image h3{position:absolute;z-index:1;top:36px;left:32px;right:24px;color:white;font-size:34px!important;line-height:1.15!important;font-weight:700;padding:0}
+.business-panel-copy{display:flex;flex-direction:column;justify-content:space-between;padding:38px 24px 22px 42px;min-width:0}
+#businesses .business-panel-copy h4{font-size:42px;line-height:1.15;font-weight:500;letter-spacing:-.015em;margin:0;color:#000}
+.business-panel-details>p{font-size:16px;line-height:1.6;color:#202529;margin:0 0 28px}
+.business-panel-details ul{display:flex;flex-wrap:wrap;gap:8px 10px;list-style:none;margin:0 0 32px;padding:0}
+.business-panel-details li{font-size:14px;line-height:1.3;padding:5px 10px;border-radius:3px;background:#f1f2f3;color:#202529}
+.business-panel-arrow{display:grid;place-items:center;width:34px;height:34px;border-radius:4px;background:#328325;color:white;padding:0;transition:background .25s}
+.business-panel-arrow:hover{background:#005ba9}
+.business-panel-navigation{display:flex;flex-wrap:wrap;gap:12px 28px;margin:24px var(--page-inset) 0}
+.business-panel-navigation button{padding:8px 0;background:none;color:#6a757d;font-size:15px;border-bottom:1px solid transparent}
+.business-panel-navigation button[aria-pressed=true]{color:#202529;border-color:#328325}
+@media(max-width:1000px){.business-showcase-heading{align-items:flex-start;flex-direction:column;gap:24px}.business-showcase-heading>p{margin:0}#businesses .business-panel{height:580px;flex-basis:90vw}.business-panel-copy{padding:24px}#businesses .business-panel-copy h4{font-size:32px}#businesses .business-panel-image h3{font-size:28px!important;left:24px;top:28px}}
+@media(max-width:700px){#businesses.business-showcase{padding-bottom:64px}.business-showcase-heading{margin-bottom:32px}#businesses #business-title{font-size:38px!important}#businesses .business-panels{gap:18px}#businesses .business-panel{grid-template-columns:1fr;height:auto;flex-basis:88vw;padding:12px}.business-panel-image{height:340px}.business-panel-copy{gap:40px;padding:28px 16px 16px}#businesses .business-panel-copy h4{font-size:32px}.business-panel-details>p{font-size:16px}.business-panel-navigation{gap:8px 18px}.business-panel-navigation button{font-size:14px}}
+
+/* Requested desktop size for the businesses statement. */
+#businesses #business-title{font-size:120px!important}
+@media(max-width:1400px){#businesses #business-title{font-size:clamp(64px,7vw,100px)!important}}
+@media(max-width:1000px){#businesses #business-title{font-size:clamp(48px,8vw,76px)!important}}
+@media(max-width:700px){#businesses #business-title{font-size:clamp(36px,8vw,52px)!important}}
+
+/* Keep the business rail clean without visible scrollbar chrome. */
+#businesses .business-panels{scrollbar-width:none}
+#businesses .business-panels::-webkit-scrollbar{display:none;width:0;height:0}
+
+/* Requested desktop size for the footer connection heading. */
+.footer-newsletter-intro h2{font-size:120px!important}
+@media(max-width:1400px){.footer-newsletter-intro h2{font-size:clamp(64px,7vw,100px)!important}}
+@media(max-width:1000px){.footer-newsletter-intro h2{font-size:clamp(48px,8vw,76px)!important}}
+@media(max-width:700px){.footer-newsletter-intro h2{font-size:clamp(36px,8vw,52px)!important}}
+
+/* Harmonize menu photography with the blue-green brand background. */
+#main-menu .menu-feature .menu-preview{display:block;position:relative;overflow:hidden;isolation:isolate;border-radius:4px;background:linear-gradient(120deg,#075ba0,#18865c);margin-bottom:14px}
+#main-menu .menu-feature .menu-preview img,#main-menu .menu-feature:hover .menu-preview img{display:block;mix-blend-mode:luminosity;opacity:.72;filter:grayscale(1) contrast(.9) brightness(1.08)!important;margin-bottom:0;border-radius:0;transition:opacity .35s ease}
+#main-menu .menu-feature[href]:hover .menu-preview img{opacity:.9}
+
+/* Directional cursor for the business card rail. */
+.business-direction-cursor{position:fixed;left:0;top:0;z-index:70;width:44px;height:44px;display:grid;place-items:center;background:#47a01a;color:#fff;border-radius:4px;pointer-events:none;opacity:0;scale:.8;transition:opacity .18s ease,scale .18s ease;will-change:transform}
+.business-direction-cursor.is-visible{opacity:1;scale:1}
+.business-direction-cursor svg{transition:transform .2s ease}
+.business-direction-cursor.is-left svg{transform:rotate(180deg)}
+@media(hover:hover) and (pointer:fine){#businesses .business-panels,#businesses .business-panel,#businesses .business-panel *:not(button):not(button *){cursor:none}}
+@media(prefers-reduced-motion:reduce){.business-direction-cursor,.business-direction-cursor svg{transition:none}}
+
+/* Clean photography and a small category label above each card heading. */
+#businesses .business-panel-image:after{display:none}
+#businesses .business-panel-label{font-size:13px;line-height:1.4;font-weight:500;text-transform:uppercase;letter-spacing:.025em;color:#47a01a;margin:0 0 24px}
+#businesses .business-panel-copy{padding-top:42px}
+#businesses .business-panel-copy h4{font-weight:500}
+@media(max-width:700px){#businesses .business-panel-copy{padding-top:28px}#businesses .business-panel-label{margin-bottom:18px}}
+
+/* Restrained editorial colour treatment for mega-menu previews. */
+#main-menu .menu-feature .menu-preview{background:#263c45}
+#main-menu .menu-feature .menu-preview img,
+#main-menu .menu-feature:hover .menu-preview img{mix-blend-mode:normal;opacity:1;filter:saturate(.45) contrast(.94) brightness(.88)!important;transition:filter .35s ease}
+#main-menu .menu-feature .menu-preview:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(15,48,70,.12),rgba(24,65,50,.08))}
+#main-menu .menu-feature[href]:hover .menu-preview img{opacity:1;filter:saturate(.55) contrast(.96) brightness(.96)!important}
+
+/* Station action inside the mega menu. */
+#main-menu .menu-station-action{position:absolute;top:118px;right:var(--page-inset)}
+#main-menu .menu-station-button{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;min-height:46px;padding:12px 22px;background:#242424;color:#fff;font-size:16px;line-height:1.25;border-radius:4px;white-space:nowrap}
+#main-menu .menu-station-button svg{flex:none}
+@media(max-width:1100px){#main-menu{padding-top:196px}#main-menu .menu-station-action{top:126px}}
+@media(max-width:700px){#main-menu{padding-top:182px}#main-menu .menu-station-action{top:110px}#main-menu .menu-station-button{min-height:42px;font-size:15px;padding:10px 18px}}
+
+/* Station action beside Login in the shared header. */
+.header .header-links .header-station-button{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;min-height:38px;padding:9px 16px;background:#242424;color:#fff;font-size:16px;line-height:1.25;border-radius:4px;white-space:nowrap}
+.header .header-links .header-station-button svg{width:16px;height:16px;flex:none}
+.header .header-links .header-station-button:hover{color:#fff;opacity:1;background:#003a85}
+@media(max-width:700px){.header .header-links{gap:10px}.header .header-right{gap:10px}.header .header-links .header-login{padding:9px 12px}.header .header-links .header-station-button{font-size:14px;padding:9px 10px;gap:8px;min-height:38px}.header .header-links .header-station-button svg{width:14px;height:14px}}
+@media(max-width:390px){.header .header-links{gap:7px}.header .header-right{gap:7px}.header .header-links .header-station-button{font-size:13px;padding-inline:8px;gap:4px}.header .header-links .header-login{padding-inline:9px}}
+
+/* Keep the opening milestone highlighted throughout the heritage story. */
+#heritage .heritage-timeline li:first-child h3,
+#heritage .heritage-timeline li:first-child p{opacity:1}
+#heritage .heritage-timeline li:first-child h3{color:#367e24}
+
+/* Completed milestones stay highlighted as the story progresses. */
+#heritage .heritage-timeline li.is-complete h3,
+#heritage .heritage-timeline li.is-complete p{opacity:1}
+#heritage .heritage-timeline li.is-complete h3{color:#367e24}
+
+/* Sustainability statement with supporting copy and a compact story carousel. */
+#nation .sustainability-banner{height:90svh;min-height:760px;max-height:1040px}
+#nation .sustainability-banner-heading{top:7.5%;right:auto;width:64%;left:var(--page-inset)}
+#nation .sustainability-banner-heading>.label{margin-bottom:42px}
+#nation .sustainability-banner #nation-title{font-size:clamp(64px,6vw,120px)!important;line-height:1.06!important;max-width:1050px;font-weight:700}
+.sustainability-introduction{position:absolute;left:70%;right:var(--page-inset);top:34%;font-size:20px;line-height:1.55;color:#fff;margin:0;font-weight:500}
+#nation .sustainability-banner-copy{left:30%;bottom:9%;max-width:490px;margin:0;right:var(--page-inset)}
+#nation .sustainability-story-content{min-height:116px;opacity:1;transform:none;transition:opacity .18s ease,transform .18s ease}
+#nation .sustainability-story-content.is-changing{opacity:0;transform:translateY(8px)}
+#nation .sustainability-story-content h3{font-size:26px!important;line-height:1.25!important;font-weight:700;color:#fff;margin:0 0 18px}
+#nation .sustainability-story-content p{font-size:18px;line-height:1.55;margin:0;color:#fff}
+#nation .sustainability-banner-link{font-size:16px;margin-top:28px;gap:18px;position:relative;border-bottom:0;padding-bottom:0}
+#nation .sustainability-banner-link:after{content:'';position:absolute;bottom:0;left:0;right:50px;height:1px;background:#ffffff70}
+.sustainability-link-arrow{display:grid;place-items:center;flex:none;width:34px;height:34px;border-radius:4px;background:#328325;color:#fff}
+.sustainability-controls{position:absolute;left:var(--page-inset);bottom:15.5%;display:flex;flex-direction:column;gap:18px}
+.sustainability-controls button{width:44px;height:44px;display:grid;place-items:center;padding:0;border-radius:4px;background:#47a01a;color:white;transition:background .25s}
+.sustainability-controls button:hover{background:#003a85}
+.sustainability-controls button:first-child svg{transform:rotate(180deg)}
+@media(max-width:1100px){#nation .sustainability-banner-heading{width:80%}#nation .sustainability-banner #nation-title{font-size:clamp(60px,6vw,90px)!important}.sustainability-introduction{left:auto;right:var(--page-inset);top:45%;max-width:330px;font-size:18px}#nation .sustainability-banner-copy{left:26%;bottom:8%;max-width:470px}.sustainability-controls{bottom:14%}}
+@media(max-width:700px){#nation .sustainability-banner{height:auto;min-height:900px;max-height:none}#nation .sustainability-banner-heading{top:48px;left:20px;right:20px;width:auto}#nation .sustainability-banner-heading>.label{margin-bottom:26px}#nation .sustainability-banner #nation-title{font-size:clamp(42px,10vw,64px)!important}.sustainability-introduction{left:20px;right:20px;top:34%;max-width:340px;font-size:17px}#nation .sustainability-banner-copy{left:20px;right:20px;bottom:130px;max-width:100%}#nation .sustainability-story-content{min-height:144px}#nation .sustainability-story-content h3{font-size:25px!important}#nation .sustainability-story-content p{font-size:17px}.sustainability-controls{left:20px;bottom:50px;flex-direction:row;gap:16px}#nation .sustainability-banner-link{font-size:15px;margin-top:24px}}
+@media(prefers-reduced-motion:reduce){#nation .sustainability-story-content{transition:none}}
+
+/* Each sustainability story has its own softly crossfading photograph. */
+#nation .sustainability-banner-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .65s ease}
+#nation .sustainability-banner-media img.is-active{opacity:1}
+#nation .sustainability-banner-media img:nth-child(2){object-position:50% 42%}
+#nation .sustainability-banner-media img:nth-child(3){object-position:40% 40%}
+#nation .sustainability-banner-media:after{z-index:1}
+@media(prefers-reduced-motion:reduce){#nation .sustainability-banner-media img{transition:none}}
+
+#nation .sustainability-banner-media img:first-child{object-position:50% 50%}
+
+/* Underline spans the sustainability link after removing its arrow. */
+#nation .sustainability-banner-link:after{right:0}
+
+#nation .sustainability-banner-media img:nth-child(2){object-position:50% 30%}
+
+#nation .sustainability-banner-media img:nth-child(3){object-position:50% 50%}
+
+#heritage .heritage-image>img:first-child{object-position:50% 52%}
+
+#heritage .heritage-image>img:nth-child(2){object-position:50% 65%}
+
+
+/* Inset green connections card overlapping the foot of the hero. */
+#hero-connections{position:relative;z-index:3;display:grid;grid-template-columns:1.15fr 1.15fr .85fr;align-items:center;width:calc(100% - var(--page-inset)*2);max-width:1760px;min-height:160px;margin:56px auto 0;padding:40px clamp(32px,5vw,96px);border-radius:10px;background:#47a01a;color:#fff}
+.hero-connection{position:relative;display:flex;flex-direction:column;justify-content:center;gap:6px;min-width:0;padding:12px 54px 12px 0;color:#fff}
+.hero-connection+.hero-connection{padding-left:clamp(36px,5vw,96px)}
+.hero-connection:not(:last-child):after{content:'';position:absolute;right:12px;top:50%;width:2px;height:42px;background:#fff;transform:translateY(-50%) rotate(26deg);opacity:.9}
+.hero-connection-title{font-size:clamp(22px,1.7vw,32px);line-height:1.2;font-weight:400;letter-spacing:-.01em}
+.hero-connection-detail{font-size:15px;line-height:1.4;color:#f0f8ed}
+.hero-connection:last-child{padding-right:0}
+.hero-connection:hover{color:#fff}
+.hero-connection[href]:hover .hero-connection-title{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px}
+.hero-connection:focus-visible{outline:2px solid white;outline-offset:8px}
+
+@media(max-width:1100px){#hero-connections{padding:32px;min-height:150px;grid-template-columns:repeat(3,minmax(0,1fr))}.hero-connection{padding-right:28px}.hero-connection+.hero-connection{padding-left:28px}.hero-connection-title{font-size:23px}.hero-connection-detail{font-size:14px}.hero-connection:not(:last-child):after{right:0}}
+@media(max-width:700px){#hero-connections{grid-template-columns:1fr;margin-top:32px;padding:16px 26px;border-radius:8px}.hero-connection,.hero-connection+.hero-connection,.hero-connection:last-child{padding:22px 0;gap:8px}.hero-connection:not(:last-child):after{left:0;right:0;top:auto;bottom:0;width:100%;height:1px;transform:none;opacity:.35}.hero-connection-title{font-size:24px}.hero-connection-detail{font-size:15px}}
+
+/* Brand gradient for the connection panel beneath the hero. */
+#hero-connections{background:radial-gradient(ellipse at 100% 100%,#25934f 0%,#228e59 24%,transparent 68%),linear-gradient(135deg,#005ba9 0%,#0756a0 40%,#086b8b 72%,#258f50 100%)}
+
+/* Clean heritage images without captions or caption shading. */
+#heritage .heritage-image:after{display:none}
+#heritage .heritage-image>img:nth-child(2){object-position:50% 58%}
+
+/* Preserve the full width of the restored heritage group photograph. */
+#heritage .heritage-image>img:first-child{object-fit:contain;object-position:center;background:#e3e3df}
+
+/* Vintage portrait fills the heritage image frame without letterboxing. */
+#heritage .heritage-image>img:first-child{object-fit:cover;object-position:50% 64%;background:transparent}
+
+#heritage .heritage-image>img:first-child{object-fit:cover;object-position:50% 62%}
+
+#heritage .heritage-image>img:nth-child(2){object-fit:cover;object-position:48% 50%;filter:none}
+
+#heritage .heritage-image>img:nth-child(3){object-fit:cover;object-position:50% 35%;filter:none}
+
+/* Thin straight dividers in the gradient connection panel. */
+@media(min-width:701px){.hero-connection:not(:last-child):after{width:1px;transform:translateY(-50%) rotate(26deg)}}
+
+/* Shared subtle corner radius, matching the media-card reference. */
+:root{--corner-radius:6px}
+#hero-connections,
+#businesses .business-panel,
+#businesses .business-panel-image,
+#businesses .business-panel-details li,
+#heritage .heritage-image,
+.story-editorial-bottom img,
+#main-menu .menu-feature .menu-preview,
+#news .card-image,
+.button,.newsletter-open,
+.header .header-links .header-login,
+.header .header-links .header-station-button,
+.menu-toggle,.newsletter-form button,.dialog-close,
+.business-panel-arrow,.business-direction-cursor,.business-cursor-mark,
+.sustainability-controls button,.image-tag{border-radius:var(--corner-radius)}
+#news .card-image{overflow:hidden}
+#main-menu .menu-feature .menu-preview img{border-radius:0}
+
+/* Square image-to-caption joins on news cards. */
+#news .card-image{border-radius:var(--corner-radius) var(--corner-radius) 0 0}
+#news .card-image img{border-bottom-left-radius:0;border-bottom-right-radius:0}
+#news .news-text-panel{border-radius:0}
+
+#business-panel-4 .business-panel-image>img{object-position:60% 50%}
+
+/* Final landing-page spacing polish. */
+:root{--section-breathing-space:clamp(104px,8vw,152px)}
+#hero-connections{margin-top:64px}
+#about{padding-top:var(--section-breathing-space);padding-bottom:var(--section-breathing-space)}
+#station-moments .station-banner-content{padding-top:120px;padding-bottom:128px}
+#station-moments .station-stats dt{margin-top:24px;max-width:25ch}
+.businesses-surface{padding-top:var(--section-breathing-space)}
+#businesses.business-showcase{padding-bottom:120px}
+.business-showcase-heading{margin-bottom:64px}
+.business-showcase-heading>p{line-height:1.65}
+#businesses .business-panels{gap:36px}
+.business-panel-details>p{line-height:1.7;margin-bottom:32px}
+.business-panel-details ul{gap:10px;margin-bottom:36px}
+#heritage .heritage-heading .heritage-intro{line-height:1.7}
+#nation.sustainability-section{padding-top:96px}
+#news.news-section{padding-top:var(--section-breathing-space);padding-bottom:var(--section-breathing-space)}
+#news .section-heading{margin-bottom:64px;align-items:flex-end}
+#news .card-grid{gap:32px}
+#news .news-text-panel{padding:32px 28px 38px}
+#news .news-meta{margin-bottom:20px}
+.footer.footer-editorial.wrapper{padding-top:112px;padding-bottom:40px}
+.footer-newsletter-intro>p{line-height:1.65}
+.footer-directory{margin-top:88px;padding-top:64px}
+.footer-navigation>div{gap:20px}
+.footer-legal{margin-top:80px;padding-top:28px;border-top:1px solid #ffffff30}
+@media(max-width:1000px){#station-moments .station-banner-content{padding-block:88px}.business-showcase-heading{margin-bottom:48px}#businesses.business-showcase{padding-bottom:88px}.footer.footer-editorial.wrapper{padding-top:88px}}
+@media(max-width:700px){:root{--section-breathing-space:72px}#hero-connections{margin-top:32px}#station-moments .station-banner-content{padding-block:72px}#businesses.business-showcase{padding-bottom:64px}.business-showcase-heading{margin-bottom:36px}#businesses .business-panels{gap:20px}#heritage.heritage-section{padding-block:72px}#nation.sustainability-section{padding-top:24px}#news .section-heading{margin-bottom:36px;align-items:flex-start}#news .card-grid{gap:32px}#news .news-text-panel{padding:26px 22px 30px}.footer.footer-editorial.wrapper{padding-top:72px;padding-bottom:28px}.footer-directory{margin-top:56px;padding-top:44px}.footer-legal{margin-top:48px;padding-top:24px}}
